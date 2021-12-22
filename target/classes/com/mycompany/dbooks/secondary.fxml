@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="995.0" prefWidth="606.0" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.dbooks.SecondaryController">
+    <children>
+      <Label alignment="CENTER" text="Order details" textAlignment="CENTER" textFill="#ea497f">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <TextField id="nameCTextField" fx:id="nameCTextField" promptText="name customer" />
+      <TextField id="idOrdTextField" fx:id="addressTextField" promptText="address" />
+      <TextField id="idOrdTextField" fx:id="numbTextField" promptText="number" />
+      <Button fx:id="addC" mnemonicParsing="false" onAction="#addCustomer" text="Button" />
+      <TextField id="nameBTextField" fx:id="nameBTextField" promptText="name book" />
+      <TextField id="idOrdTextField" fx:id="authorTextField" promptText="author" />
+      <Button fx:id="addB" mnemonicParsing="false" onAction="#addBook" text="Button" />
+      <TextField id="idOrdTextField" fx:id="idOrdTextField" promptText="id order" />
+      <TextField fx:id="nameBBTextField" promptText="name book" />
+      <TextField fx:id="nameCCTextField" promptText="name customer" />
+      <Button fx:id="addO" mnemonicParsing="false" onAction="#addOrder" text="Button" />
+      <TableView fx:id="table" editable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="257.0" prefWidth="387.0" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn fx:id="columnOrders" prefWidth="99.0" text="Orders" />
+          <TableColumn fx:id="columnBooks" prefWidth="144.0" text="Books" />
+            <TableColumn fx:id="columnCustomers" editable="false" prefWidth="136.0" sortable="false" text="Customers" />
+        </columns>
+      </TableView>
+        <Button fx:id="secondaryButton" contentDisplay="CENTER" onAction="#switchToPrimary" prefHeight="40.0" prefWidth="94.0" text="Back" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
